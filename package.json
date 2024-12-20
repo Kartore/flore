@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build --mode client && vite build",
     "preview": "pnpm run build && wrangler dev",
-    "deploy": "pnpm run build && wrangler deploy"
+    "deploy": "pnpm run build && wrangler deploy",
+    "lint": "eslint ."
   },
   "private": true,
   "dependencies": {
@@ -14,13 +15,23 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20241218.0",
+    "@eslint/js": "^9.17.0",
     "@hono/vite-build": "1.2.0",
     "@hono/vite-dev-server": "0.17.0",
     "autoprefixer": "10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import-x": "^4.6.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^15.14.0",
     "postcss": "8.4.49",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "3.4.17",
+    "typescript-eslint": "^8.18.1",
     "vite": "5.4.11",
     "wrangler": "3.99.0"
   },
-  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
 }
