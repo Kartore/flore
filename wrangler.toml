@@ -5,6 +5,13 @@ compatibility_flags = [ "nodejs_compat" ]
 no_bundle = true
 assets = { directory = "dist", binding = "STATIC_ASSETS", experimental_serve_directly = true }
 
+[[d1_databases]]
+binding = "DB"
+database_name = "flore-prod"
+database_id = "4a894d57-685a-45f0-909d-8f19c8fb8222"
+migrations_dir = "drizzle/migrations"
+
+
 # [vars]
 # MY_VAR = "my-variable"
 

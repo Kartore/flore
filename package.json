@@ -6,10 +6,18 @@
     "build": "vite build --mode client && vite build",
     "preview": "pnpm run build && wrangler dev",
     "deploy": "pnpm run build && wrangler deploy",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "generate:types": "wrangler types ./app/binding.d.ts",
+    "generate": "drizzle-kit generate",
+    "local:migration": "wrangler d1 migrations apply flore-prod --local",
+    "remote:migration": "wrangler d1 migrations apply flore-prod --remote"
   },
   "private": true,
   "dependencies": {
+    "@auth/core": "^0.37.4",
+    "@auth/drizzle-adapter": "^1.7.4",
+    "@hono/auth-js": "^1.0.15",
+    "drizzle-orm": "^0.38.2",
     "hono": "4.6.14",
     "honox": "0.1.27"
   },
@@ -19,6 +27,7 @@
     "@hono/vite-build": "1.2.0",
     "@hono/vite-dev-server": "0.17.0",
     "autoprefixer": "10.4.20",
+    "drizzle-kit": "^0.30.1",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.7.0",
