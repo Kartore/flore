@@ -8,9 +8,11 @@ assets = { directory = "dist", binding = "STATIC_ASSETS", experimental_serve_dir
 [[d1_databases]]
 binding = "DB"
 database_name = "flore-prod"
-database_id = "4a894d57-685a-45f0-909d-8f19c8fb8222"
+database_id = "4485366f-52d4-48db-b318-6c669f6318f9"
 migrations_dir = "drizzle/migrations"
 
+[vars]
+AUTH_URL="https://flore.nekoyasan.workers.dev/api/auth"
 
 # [vars]
 # MY_VAR = "my-variable"
