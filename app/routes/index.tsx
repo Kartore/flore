@@ -7,6 +7,7 @@ export default createRoute((c) => {
   return c.render(
     <div>
       <h1 class={'text-red-400'}>Hello, {name}!</h1>
+      <a href={'/test'}>Test</a>
       <Counter />
     </div>,
     { title: name }
