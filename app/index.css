@@ -1,3 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/*noinspection CssInvalidAtRule*/
+@theme {
+  --color-text: oklch(18.24% 0.0124 237.55);
+    --color-background: oklch(96.5% 0.009 237.55);
+    --color-card-background: oklch(98.6% 0.009 237.55);
+    --font-montserrat: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+}
+
+@layer base {
+    html {
+        font-family: 'Zen Kaku Gothic New', system-ui, sans-serif;
+        color: var(--color-text);
+    }
+}
+

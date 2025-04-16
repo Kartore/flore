@@ -9,7 +9,7 @@ import { MiddlewareHandler } from 'hono';
 import { env } from 'hono/adapter';
 import { setCookie } from 'hono/cookie';
 
-type SignInParameters = Parameters<typeof signInReactFunction>;
+export type SignInParameters = Parameters<typeof signInReactFunction>;
 
 export function signIn(authorizationParams?: SignInParameters[2]): MiddlewareHandler {
   return async (c) => {
@@ -82,6 +82,14 @@ export function signIn(authorizationParams?: SignInParameters[2]): MiddlewareHan
             : resCookie.options.sameSite
               ? 'Strict'
               : undefined,
+        priority:
+          resCookie.options.priority === 'high'
+            ? 'High'
+            : resCookie.options.priority === 'medium'
+              ? 'Medium'
+              : resCookie.options.priority === 'low'
+                ? 'Low'
+                : undefined,
       });
     }
 
@@ -129,6 +137,14 @@ export function signOut(): MiddlewareHandler {
             : resCookie.options.sameSite
               ? 'Strict'
               : undefined,
+        priority:
+          resCookie.options.priority === 'high'
+            ? 'High'
+            : resCookie.options.priority === 'medium'
+              ? 'Medium'
+              : resCookie.options.priority === 'low'
+                ? 'Low'
+                : undefined,
       });
     }
 
